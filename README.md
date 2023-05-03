@@ -2,6 +2,18 @@
 Compile C/C++ code with [Emscripten](https://emscripten.org/) in the browser.
 You can see it in action in the [live demo](https://jprendes.github.io/emception/).
 
+# Setup steps
+- Remove any provious emsdk present on the system.
+- Install OpenSSL
+```bash
+./build-openssl.sh
+```
+- Install known deps:
+```bash
+sudo apt  install emscripten
+sudo apt  install jq
+```
+
 # Build
 To build Emception, simply clone the repo, and run `./build-with-docker.sh`. I've only built it on Linux, but you should be able to build it from anywhere you can run Docker. Bear in mind that the build will take a long while (specially cloning/building llvm and building pyodide), so go get a a cup of coffee.
 ```bash

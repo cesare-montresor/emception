@@ -19,4 +19,6 @@ docker run \
     -u $(id -u):$(id -g) \
     $(id -G | tr ' ' '\n' | xargs -I{} echo --group-add {}) \
     emception_build:latest \
+    bash -c "cd $(pwd) && cat ./build.sh"  
+    bash -c "echo -------------------------------------------------------"  
     bash -c "cd $(pwd) && ./build.sh"
